@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "test.css",
+	"file": "main.css",
 	"sources": [
-		"../scss/test.scss"
+		"../scss/main.scss"
 	],
 	"names": [],
 	"mappings": "AAAA,AAAA,EAAE,AAAA,CACE,UAAU,CAAE,MAAM,CACrB"

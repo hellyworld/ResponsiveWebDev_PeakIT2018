@@ -1,1 +1,1 @@
-browser-sync ./ -w  --files "**/*, \!./**/*.bat"
+browser-sync ../project -w  --files "**/*, \!./**/*.bat"
