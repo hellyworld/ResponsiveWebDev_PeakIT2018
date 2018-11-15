@@ -2,8 +2,9 @@
 	"version": 3,
 	"file": "main.css",
 	"sources": [
-		"../scss/main.scss"
+		"../scss/main.scss",
+		"../scss/_header.scss"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,EAAE,AAAA,CACE,UAAU,CAAE,MAAM,CACrB"
+	"mappings": "ACAA,AAAA,EAAE,AAAA,CACE,UAAU,CAAE,MAAM,CAClB,KAAK,CAAE,GAAG,CACb"
 }
