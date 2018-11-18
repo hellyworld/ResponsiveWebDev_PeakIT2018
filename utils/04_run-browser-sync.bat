@@ -1,1 +1,0 @@
-browser-sync ../project -w  --files "**/*, \!./**/*.bat"
