@@ -8,6 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>The Chuck Norris App</title>
@@ -17,15 +18,31 @@
     <div id="navigationContainer"></div>
 
     <script>
-        
       fetch("/components/header.html")
         .then(function(response) {
           return response.text();
         })
-        .then(function(body) {
-          document.querySelector("#navigationContainer").innerHTML = body;
+        .then(function(markup) {
+          document.querySelector("#navigationContainer").innerHTML = markup;
+          document
+            .querySelector("#expandNav")
+            .addEventListener("click", function() {
+              debugger;
+              if (
+                document.querySelector("#navList").classList.contains("hidden")
+              ) {
+                document.querySelector("#navList").classList.remove("hidden");
+              } else {
+                document.querySelector("#navList").classList.add("hidden");
+              }
+            });
         });
+    </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        debugger;
+      });
     </script>
   </body>
 </html>
