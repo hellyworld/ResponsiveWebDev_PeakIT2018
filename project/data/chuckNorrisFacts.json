@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "question": "His real name isn't 'Chuck' or even 'Charles'.",
+      "answers": [
+        {
+          "answer": "Carlos Ray Norris",
+          "isTrue": true
+        },
+        {
+          "answer": "Lorem Ipsum",
+          "isTrue": false
+        }
+      ]
+    },
+    {
+        "question": "He hasn't lost a fight since",
+        "answers": [
+          {
+            "answer": 1968,
+            "isTrue": true
+          },
+          {
+            "answer": 1950,
+            "isTrue": false
+          }
+        ]
+      }
+  ]
+}
