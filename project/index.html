@@ -2,47 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"/>
+    <link  rel="stylesheet" href="./css/main.css"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <title>The Chuck Norris App</title>
   </head>
-
   <body>
     <div id="navigationContainer"></div>
+    
+    <main>
 
-    <script>
-      fetch("/components/header.html")
-        .then(function(response) {
-          return response.text();
-        })
-        .then(function(markup) {
-          document.querySelector("#navigationContainer").innerHTML = markup;
-          document
-            .querySelector("#expandNav")
-            .addEventListener("click", function() {
-              debugger;
-              if (
-                document.querySelector("#navList").classList.contains("hidden")
-              ) {
-                document.querySelector("#navList").classList.remove("hidden");
-              } else {
-                document.querySelector("#navList").classList.add("hidden");
-              }
-            });
-        });
-    </script>
+      <section>
+        <p>A great adventure begins</p>
+      </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        debugger;
-      });
-    </script>
+    </main>
+
+    <script src="./script/loaders.js"></script>
+    <script src="./script/app.js"></script>
   </body>
 </html>
