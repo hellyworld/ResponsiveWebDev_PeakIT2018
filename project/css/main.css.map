@@ -4,8 +4,9 @@
 	"sources": [
 		"../scss/main.scss",
 		"../scss/_helpers.scss",
-		"../scss/_header.scss"
+		"../scss/_header.scss",
+		"../scss/_footer.scss"
 	],
 	"names": [],
-	"mappings": "AAGA,AAAA,IAAI,AAAA,CACA,gBAAgB,CAAE,MAAM,CAC3B"
+	"mappings": "AAIA,AAAA,IAAI,AAAA,CACA,gBAAgB,CAAE,MAAM,CAI3B"
 }
