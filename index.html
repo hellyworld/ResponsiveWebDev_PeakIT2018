@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Introduction to Responsive Web Development</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <style>
+    .zoom {
+      transition: transform 0.2s; /* Animation */
+    }
+
+    .zoom:hover {
+      transform: scale(
+        1.05
+      ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+  />
+
+  <body>
+    <h1 class="text-center py-10 font-serif">The Chuck Norris App</h1>
+
+    <div class="flex justify-around">
+      <a href="./helloWorld/">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg zoom">
+          <img
+            class="w-full"
+            src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543434287/HelloWorld.jpg"
+            alt="Hello World"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Hello World</div>
+            <p class="text-grey-darker text-base">
+              This is demo page that contains the main concepts and building
+              blocks of Front-End Web Development
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#HTML</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#SCSS</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#Intro</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#VSCode</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#Front-End</span
+            >
+          </div>
+        </div>
+      </a>
+
+      <a href="./project/">
+        <div class="max-w-sm rounded overflow-hidden shadow-lg zoom">
+          <img
+            class="w-full"
+            src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543432463/ChuckNorris.jpg"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">The Chuck Norris App</div>
+            <p class="text-grey-darker text-base">
+              Here we put the core concepts in practice by building a web
+              interface that can "talk" to an API, get that to the server and
+              sent parameters over HTTP
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#javaScript</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#AJAX</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#fetch</span
+            >
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#API</span
+            >
+          </div>
+        </div>
+      </a>
+
+      <a
+        href="https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018/tree/master/presentation"
+      >
+        <div class="max-w-sm rounded overflow-hidden shadow-lg zoom">
+          <img
+            class="w-full"
+            src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543434356/TypingCat.gif"
+            alt="Sunset in the mountains"
+          />
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Resources</div>
+            <p class="text-grey-darker text-base">
+              A shortcut to my github repo containing different examples, tips
+              and refferences.
+            </p>
+          </div>
+          <div class="px-6 py-4">
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#DevTools
+            </span>
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#GIT
+            </span>
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#hacking
+            </span>
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#FUN
+            </span>
+            <span
+              class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
+              >#Shortcuts
+            </span>
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </body>
 </html>
