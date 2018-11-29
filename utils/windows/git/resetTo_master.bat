@@ -1,1 +1,1 @@
-git checkout master && git fetch && git clean -f && git clean -fd && git reset --hard HEAD  && git pull
+git fetch && git clean -f && git clean -fd && git reset --hard HEAD  && git pull && git checkout master
