@@ -1,11 +1,63 @@
-body{
+body {
     background-color: rgb(36, 221, 221);
 }
-#wrapper{
+
+h1 {
+    text-align: center;
+    user-select: none;
+}
+
+#wrapper {
     padding: 0 15px;
 }
-.round-picture-frame{
-    border: 3px dotted gray;
+
+.round-picture-frame {
     border-radius: 100%;
-    width: 10rem;
+    height: 15rem;
+}
+
+#cat-container {
+    background-color: #6297a5;
+}
+
+#dog-container {
+    background-color: rgba(61, 209, 71, 0.7)
+}
+
+#dog-container img,
+#cat-container img {
+    border: 4px dotted blue;
+}
+
+.center-inner-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+a:hover {
+    position: absolute;
+    color: black;
+    transform: scale(1.2);
+}
+
+a::before{
+    content: '🌍';
+}
+
+a:visited{
+    color: yellow;
+}
+
+@keyframes flip_animation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+img:hover {
+    animation-name: flip_animation;
+    animation-duration: 1s;
 }
