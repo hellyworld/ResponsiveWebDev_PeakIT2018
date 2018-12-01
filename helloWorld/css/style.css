@@ -18,10 +18,12 @@ h1 {
 
 #cat-container {
     background-color: #6297a5;
+    padding: 15px 0;
 }
 
 #dog-container {
-    background-color: rgba(61, 209, 71, 0.7)
+    background-color: rgba(61, 209, 71, 0.7);
+    padding: 15px 0;
 }
 
 #dog-container img,
@@ -32,21 +34,43 @@ h1 {
 .center-inner-horizontal {
     display: flex;
     justify-content: center;
+    /* flex-direction: row-reverse;W */
 }
 
-a:hover {
-    position: absolute;
+footer h3{
+    cursor: help;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul>li{
+    font-weight: bold;
+    display: inline;
+}
+
+/* pseudo-enements */
+
+a, a:hover, a:active, a:visited{
+    text-decoration: none;
     color: black;
-    transform: scale(1.2);
+}
+
+a:visited{
+    color:yellow;
+}
+
+a:hover{
+    color: blue;
 }
 
 a::before{
     content: '🌍';
 }
 
-a:visited{
-    color: yellow;
-}
+
+/* animations */
 
 @keyframes flip_animation {
     from {
@@ -57,7 +81,8 @@ a:visited{
     }
 }
 
-img:hover {
+.do-flip {
     animation-name: flip_animation;
     animation-duration: 1s;
+    /* animation-delay: 0.5s; */
 }
