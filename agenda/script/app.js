@@ -18,22 +18,20 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('footer loaded');
      }, false);
 
-     initCheckboxes();
-
+     initCheckboxes(); 
 });
 
 function initCheckboxes(){
    var allCheckboxes = document.querySelectorAll('ul>li>input[type="checkbox"]');
    allCheckboxes.forEach(element => {
+      getCheckboxFromLocalStorage(element);
       calcualteProgress();
       element.addEventListener('change', calcualteProgress);
-      getCheckboxFromLocalStorage(element);
    });
 }
 
 function getCheckboxFromLocalStorage(checkboxEl){
    for(var i =0; i<agendaStorage.length; i++){
-      debugger;
       if(checkboxEl.id == agendaStorage[i].inputId){
          debugger;
          checkboxEl.checked = agendaStorage[i].checked;
