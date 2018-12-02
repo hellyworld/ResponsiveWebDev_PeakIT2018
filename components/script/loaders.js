@@ -1,5 +1,5 @@
 function loadHeader() {
-  fetch("../../components/header.html")
+  fetch("../components/header.html")
     .then(function(response) {
       return response.text();
     })
@@ -21,7 +21,7 @@ function loadHeader() {
 }
 
 function loadFooter() {
-  fetch("../../components/footer.html")
+  fetch("../components/footer.html")
     .then(function(response) {
       return response.text();
     })
