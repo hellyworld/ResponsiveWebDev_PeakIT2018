@@ -2,6 +2,7 @@
 @import "../../components/scss/footer";
 @import "../../components/scss/helpers";
 
+
 :root {
     --progres-bar-background: #f3f3f3;
     --progres-bar-main: #95d015;
@@ -11,6 +12,7 @@
 progress::-webkit-progress-bar {
     background-color: var(--progres-bar-background);
     border-radius: 9px;
+
 }
 
 progress::-webkit-progress-value {
