@@ -14,50 +14,57 @@
     <div id="navigationContainer"></div>
 
     <article class="py-12 px-4">
-      <h2>Total progress: <progress id="totalProgress" max="100" value="30"></progress></h2>
+      <h2>Total progress: <progress id="totalProgress" max="400" value="0"></progress></h2>
+      <br>
       <ul>
-        <li>
-          General Concepts: <progress id="generalProgress" max="100"></progress>
+        <li class="cathegory">
+          General Concepts: <progress max="100" value="0"></progress>
           <ul>
-            <li><input type="checkbox" />Intro to web technologies</li>
-            <li><input type="checkbox" />paradigms</li>
-            <li><input type="checkbox" />VS Code</li>
-            <li><input type="checkbox" />DevTools</li>
-            <li><input type="checkbox" />Version Controll</li>
+            <li><input id="intro" type="checkbox"  max="100" value="20" />Intro to web technologies</li>
+            <li><input id="paradigms" type="checkbox"  max="100" value="20"/>paradigms</li>
+            <li><input id="VSCode" type="checkbox"  max="100" value="20"/>VS Code</li>
+            <li><input id="devTools" type="checkbox"  max="100" value="20"/>DevTools</li>
+            <li><input id="vcs" type="checkbox"  max="100" value="20"/>Version Controll</li>
           </ul>
         </li>
-        <li>
+        <li class="cathegory">
           HTML: <progress id="htmlProgress" max="100"></progress>
           <ul>
-            <li><input type="checkbox" />Anothomy of a tag</li>
-            <li><input type="checkbox" />Markup & Semantic tags</li>
-            <li><input type="checkbox" />Media tags</li>
-            <li><input type="checkbox" />The DOM</li>
-            <li><input type="checkbox" />Pest Practices</li>
+            <li><input type="checkbox"  max="100" value="20"/>Anothomy of a tag</li>
+            <li><input type="checkbox"  max="100" value="20"/>Markup & Semantic tags</li>
+            <li><input type="checkbox"  max="100" value="20"/>Media tags</li>
+            <li><input type="checkbox"  max="100" value="20"/>The DOM</li>
+            <li><input type="checkbox"  max="100" value="20"/>Pest Practices</li>
           </ul>
         </li>
-        <li>
+        <li  class="cathegory">
           Styling: <progress id="stylingProgress" max="100"></progress>
           <ul>
-            <li><input type="checkbox" />CSS</li>
-            <li><input type="checkbox" />SCSS</li>
-            <li><input type="checkbox" />Selectors</li>
-            <li><input type="checkbox" />Specificity</li>
-            <li><input type="checkbox" />Positioning</li>
-            <li><input type="checkbox" />CSS Frameworks</li>
-            <li><input type="checkbox" />CSS Fonts</li>
+            <li><input type="checkbox"  max="100" value="10"/>CSS</li>
+            <li><input type="checkbox"  max="100" value="10"/>SCSS</li>
+            <li><input type="checkbox"  max="100" value="10"/>Ways to include it</li>
+            <li><input type="checkbox"  max="100" value="10"/>Selectors</li>
+            <li><input type="checkbox"  max="100" value="10"/>Specificity</li>
+            <li><input type="checkbox"  max="100" value="10"/>Positioning(Flex)</li>
+            <li><input type="checkbox"  max="100" value="10"/>Media Queries</li>
+            <li><input type="checkbox"  max="100" value="10"/>CSS Frameworks</li>
+            <li><input type="checkbox"  max="100" value="10"/>CSS Fonts</li>
+            <li><input type="checkbox"  max="100" value="10"/>Advanced SCSS</li>
           </ul>
         </li>
-        <li>
+        <li  class="cathegory">
           JavaScript: <progress id="stylingProgress" max="100"></progress>
           <ul>
-            <li><input type="checkbox" />JS Programming CrushCourse</li>
-            <li><input type="checkbox" />JS Functions & Flow Controll</li>
-            <li><input type="checkbox" />Callbacks</li>
-            <li><input type="checkbox" />Events</li>
-            <li><input type="checkbox" />Manipualtiong the DOM</li>
-            <li><input type="checkbox" />AJAX</li>
-            <li><input type="checkbox" />Debugging</li>
+            <li><input type="checkbox"  max="100" value="10"/>JS Programming CrashCourse</li>
+            <li><input type="checkbox"  max="100" value="10"/>JS Functions & Flow Controll</li>
+            <li><input type="checkbox"  max="100" value="10"/>Callbacks</li>
+            <li><input type="checkbox"  max="100" value="10"/>Events</li>
+            <li><input type="checkbox"  max="100" value="10"/>Manipualtiong the DOM</li>
+            <li><input type="checkbox"  max="100" value="10"/>ES6</li>
+            <li><input type="checkbox"  max="100" value="10"/>AJAX</li>
+            <li><input type="checkbox"  max="100" value="10"/>JavaScript OOP</li>
+            <li><input type="checkbox"  max="100" value="10"/>Web APIs</li>
+            <li><input type="checkbox"  max="100" value="10"/>Debugging</li>
           </ul>
         </li>
       </ul>
