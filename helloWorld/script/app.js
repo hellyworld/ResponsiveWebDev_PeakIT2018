@@ -12,3 +12,7 @@ for (var i = 0; i < allImages.length; i++) {
     }, 1000);
   });
 }
+
+function goingHome(){
+  window.location.href = window.location.href.substring(0, window.location.href.indexOf('/helloWorld/'));
+}
