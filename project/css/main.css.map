@@ -3,10 +3,10 @@
 	"file": "main.css",
 	"sources": [
 		"../scss/main.scss",
-		"../scss/_helpers.scss",
-		"../scss/_header.scss",
-		"../scss/_footer.scss"
+		"../../components/scss/_header.scss",
+		"../../components/scss/_footer.scss",
+		"../../components/scss/_helpers.scss"
 	],
 	"names": [],
-	"mappings": "AAIA,AAAA,IAAI,AAAA,CACA,gBAAgB,CAAE,MAAM,CAI3B"
+	"mappings": "ACAA,AACI,oBADgB,CAChB,CAAC,AAAA,CACG,eAAe,CAAE,IAAI,CAExB,ADAL,AAAA,IAAI,AAAA,CACA,gBAAgB,CAAE,MAAM,CAQ3B,AATD,AAIY,IAJR,CAEA,IAAI,CACA,IAAI,CACA,GAAG,AAAA,CACC,OAAO,CAAE,MAAM,CAClB"
 }

@@ -1,10 +1,14 @@
-@import "helpers";
-@import "header";
-@import "footer";
+@import "../../components/scss/header";
+@import "../../components/scss/footer";
+@import "../../components/scss/helpers";
 
 body{
     background-color: bisque;
     main{
-    //    main page code goes here
+        form{
+            div{
+                padding: 15px 0;
+            }
+        }
     }
 }
