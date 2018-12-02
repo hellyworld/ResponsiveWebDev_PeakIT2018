@@ -37,18 +37,29 @@
     <main class="px-3">
 
       <section>
-        <h1>A great adventure begins</h1>
+        <h1 class="text-center my-8">A great adventure begins</h1>
       </section>
+
       <section>
-        <form>
-          <input type="text" placeholder="Your First Name">
-          <input type="text" placeholder="Your Last Name">
-          <label>
-            <span>Filter Mature jokes</span>
-            <input type="checkbox" checked name="filderMature">
-          </label>
-          <buton type="submit" class="cursor-pointer" checked>Get Joke!</buton>
+        <form class="flex flex-col">
+          <div class="flex justify-center">
+              <input id="firstName" type="text" placeholder="Your First Name">
+              <input id="lastName" type="text" placeholder="Your Last Name">
+          </div>
+          <div class="flex justify-center">
+              <label>
+                  <span>Filter Mature jokes</span>
+                  <input id="filderMature" type="checkbox" checked name="filderMature">
+              </label>
+          </div>
+          <div class="flex justify-center">
+              <buton id="getJoke" type="submit" class="cursor-pointer bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" checked>Get Joke!</buton>
+          </div>
         </form>
+      </section>
+
+      <section id="jokeContainer" class="flex justify-center py-10">
+        <p>Your Joke will go here</p>
       </section>
 
     </main>

@@ -1,0 +1,1 @@
+node-sass ./scss -o ./project/css -w --output-style compressed ---source-map true

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "components.css",
+	"sources": [
+		"../scss/components.scss",
+		"../scss/_footer.scss",
+		"../scss/_header.scss",
+		"../scss/_helpers.scss"
+	],
+	"names": [],
+	"mappings": "AEAA,AACI,oBADgB,CAChB,CAAC,AAAA,CACG,eAAe,CAAE,IAAI,CAExB"
+}
