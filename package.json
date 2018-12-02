@@ -4,7 +4,8 @@
   "description": "Responsive Web Dev Project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss" : " node-sass ./components/scss -o ./components/css -w --output-style compressed ---source-map true | node-sass ./agenda/scss -o ./agenda/css -w --output-style compressed ---source-map true | node-sass ./helloWorld/scss -o ./helloWorld/css -w --output-style compressed ---source-map true | node-sass ./project/scss -o ./project/css -w --output-style compressed ---source-map true"
   },
   "repository": {
     "type": "git",
