@@ -7,14 +7,14 @@
     <title>Introduction to Responsive Web Development</title>
   </head>
 
-  <style>
+  <style> wee should avoid page-level styling, this is just an example
     .zoom {
       transition: transform 0.2s; /* Animation */
     }
 
     .zoom:hover {
       transform: scale(
-        1.05
+        1.1
       ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     }
 
@@ -36,7 +36,7 @@
     <h1 class="text-center py-10 font-serif">The Chuck Norris App</h1>
 
     <div class="flex justify-around">
-      <a href="./helloWorld/">
+      <a href="./helloWorld/"> <!--this is a relative path-->
         <div class="max-w-xs rounded overflow-hidden shadow-lg zoom">
           <img
             class="w-full"

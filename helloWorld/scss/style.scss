@@ -16,6 +16,7 @@ h1 {
     height: 15rem;
 }
 
+
 #cat-container {
     background-color: #6297a5;
     padding: 15px 0;
@@ -29,7 +30,11 @@ h1 {
 #dog-container img,
 #cat-container img {
     border: 4px dotted blue;
+    &:hover{
+        border: 4px dotted yellow;
+    }
 }
+
 
 .center-inner-horizontal {
     display: flex;
@@ -84,4 +89,12 @@ a::before{
     animation-name: flip_animation;
     animation-duration: 1s;
     /* animation-delay: 0.5s; */
+}
+
+#takeMeSomewareCool{
+    background-color: violet;
+}
+
+#takeMeSomewareCool:hover{
+    font-size: 1rem;
 }
