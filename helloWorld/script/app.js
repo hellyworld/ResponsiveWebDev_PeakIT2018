@@ -1,5 +1,10 @@
 console.log("it works!");
 
+
+function goingHome(){
+  window.location.href = window.location.href.substring(0, window.location.href.indexOf('/helloWorld/'));
+}
+
 var allImages = document.querySelectorAll("img");
 
 for (var i = 0; i < allImages.length; i++) {
@@ -13,6 +18,20 @@ for (var i = 0; i < allImages.length; i++) {
   });
 }
 
-function goingHome(){
-  window.location.href = window.location.href.substring(0, window.location.href.indexOf('/helloWorld/'));
-}
+var allCatImages = document.querySelectorAll("#cat-container img");
+allCatImages.forEach(catImage =>{
+  catImage.addEventListener("click",function(){
+    var audio = new Audio('./media/meow.mp3');
+    audio.play();
+  })
+});
+
+var allDogImages = document.querySelectorAll("#dog-container img");
+allDogImages.forEach(dogImage =>{
+  dogImage.addEventListener("click",function(){
+    var audio = new Audio('./media/bark.mp3');
+    audio.play();
+  })
+});
+
+
