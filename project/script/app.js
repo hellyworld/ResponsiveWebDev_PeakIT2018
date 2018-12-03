@@ -16,8 +16,15 @@ document.addEventListener("DOMContentLoaded", function() {
     //event listeners
     getJokeButton.addEventListener("click", getJokeFromServer);
 
+    //todo: replace with AXIOS??
     function getJokeFromServer(){
-   
+      fetch('http://api.icndb.com/jokes/random/?exclude=[explicit]')
+      .then(function(response) {
+         return response.json();
+      })
+      .then(function(myJson) {
+         console.log(JSON.stringify(myJson));
+      });
    }
 
 });
