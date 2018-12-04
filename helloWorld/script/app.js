@@ -21,19 +21,25 @@ var allCatImages = document.querySelectorAll("#cat-container img");
 allCatImages.forEach(catImage =>{
   catImage.addEventListener("click",function(){
     var audio = new Audio('./media/meow.mp3');
-    //enable vibration
-    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
-    window.navigator.vibrate([200, 100, 200]);
     audio.play();
+    vibrate();
   })
 });
 
 var allDogImages = document.querySelectorAll("#dog-container img");
 allDogImages.forEach(dogImage =>{
   dogImage.addEventListener("click",function(){
-    var audio = new Audio('./media/bark.mp3');
-    audio.play();
+    var audio = new Audio('./media/bark.mp3');    
+    audio.play().then(function(){
+      vibrate();
+    });
   })
 });
+
+function vibrate(){
+      //enable vibration
+  navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    window.navigator.vibrate([200, 100, 200]);
+}
 
 
