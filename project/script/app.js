@@ -19,11 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
     //todo: replace with AXIOS??
     function getJokeFromServer(){
 
+      var firstNameVal = document.querySelector('#firstName').value;
+      var lastNameVal = document.querySelector('#lastName').value;
+
       var url = new URL('http://api.icndb.com/jokes/random/');
 
       console.dir(url);
 
-      var params = {exclude:'[explicit]', firstName : 'Jane', lastName: 'Doe'}
+      var params = {exclude:'[explicit]', firstName : firstNameVal, lastName: lastNameVal}
 
       url.search = new URLSearchParams(params)
 
