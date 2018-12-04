@@ -31,6 +31,7 @@ allDogImages.forEach(dogImage =>{
   dogImage.addEventListener("click",function(){
     var audio = new Audio('./media/bark.mp3');    
     audio.play().then(function(){
+      alert('meaw');
       vibrate();
     });
   })
