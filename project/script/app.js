@@ -18,13 +18,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //todo: replace with AXIOS??
     function getJokeFromServer(){
-      fetch('http://api.icndb.com/jokes/random/?exclude=[explicit]')
+
+      var url = new URL('http://api.icndb.com/jokes/random/');
+
+      console.dir(url);
+
+      var params = {exclude:'[explicit]', firstName : 'Jane', lastName: 'Doe'}
+
+      url.search = new URLSearchParams(params)
+
+      fetch(url)
       .then(function(response) {
+         console.log('initial response: ', response);
          return response.json();
       })
-      .then(function(myJson) {
-         console.log(JSON.stringify(myJson));
+      .then(function(jsonResponse) {
+         console.log('json response: ', jsonResponse);
+         displayJoke(jsonResponse);
       });
+   }
+
+   function displayJoke (joke){
+      debugger;
+      console.log('doc container',  document.querySelector('#jokeContainer p'));
+      document.querySelector('#jokeContainer p').innerHTML = joke.value.joke;
    }
 
 });

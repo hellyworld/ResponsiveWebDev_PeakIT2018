@@ -1,6 +1,5 @@
 console.log("it works!");
 
-
 function goingHome(){
   window.location.href = window.location.href.substring(0, window.location.href.indexOf('/helloWorld/'));
 }
