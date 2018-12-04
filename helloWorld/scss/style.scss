@@ -14,8 +14,8 @@ h1 {
 .round-picture-frame {
     border-radius: 100%;
     height: 15rem;
+    width: 15rem;
 }
-
 
 #cat-container {
     background-color: #6297a5;
@@ -30,47 +30,50 @@ h1 {
 #dog-container img,
 #cat-container img {
     border: 4px dotted blue;
-    &:hover{
+    &:hover {
         border: 4px dotted yellow;
     }
 }
 
-
 .center-inner-horizontal {
     display: flex;
     justify-content: center;
-    /* flex-direction: row-reverse;W */
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
 }
 
-footer h3{
+footer h3 {
     cursor: help;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-ul>li{
+ul>li {
     font-weight: bold;
     display: inline;
 }
 
 /* pseudo-enements */
 
-a, a:hover, a:active, a:visited{
+a,
+a:hover,
+a:active,
+a:visited {
     text-decoration: none;
     color: black;
 }
 
-a:visited{
-    color:yellow;
+a:visited {
+    color: yellow;
 }
 
-a:hover{
+a:hover {
     color: blue;
 }
 
-a::before{
+a::before {
     content: '🌍';
 }
 
@@ -91,10 +94,32 @@ a::before{
     /* animation-delay: 0.5s; */
 }
 
-#takeMeSomewareCool{
+#takeMeSomewareCool {
     background-color: violet;
 }
 
-#takeMeSomewareCool:hover{
+#takeMeSomewareCool:hover {
     font-size: 1rem;
+}
+
+@media only screen (max-width: 1100px) {
+    .animal-container {
+       img{
+           height: 10rem;
+           width: 10rem;
+       }
+    }
+}
+
+//making things response (the hard way)
+@media only screen and (max-width: 600px){
+    .animal-container {
+        background-color: rgb(235, 164, 164)!important;
+        flex-direction: column;
+        img{
+            margin: 0 auto;
+            height: 15rem!important;
+            width: 15rem!important;
+        }
+    }
 }
