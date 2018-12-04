@@ -21,7 +21,9 @@ var allCatImages = document.querySelectorAll("#cat-container img");
 allCatImages.forEach(catImage =>{
   catImage.addEventListener("click",function(){
     var audio = new Audio('./media/meow.mp3');
-    window.navigator.vibrate(200);
+    //enable vibration
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+    window.navigator.vibrate([200, 100, 200]);
     audio.play();
   })
 });
