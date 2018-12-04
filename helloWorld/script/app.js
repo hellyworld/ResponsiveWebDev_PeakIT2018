@@ -7,7 +7,7 @@ function goingHome(){
 var allImages = document.querySelectorAll("img");
 
 for (var i = 0; i < allImages.length; i++) {
-  allImages[i].addEventListener("click", function() {
+  allImages[i].addEventListener("click", function() { 
     var currentElement = this;
     console.log("clicked on", currentElement);
     currentElement.classList.add("do-flip");
@@ -21,6 +21,7 @@ var allCatImages = document.querySelectorAll("#cat-container img");
 allCatImages.forEach(catImage =>{
   catImage.addEventListener("click",function(){
     var audio = new Audio('./media/meow.mp3');
+    window.navigator.vibrate(200);
     audio.play();
   })
 });
