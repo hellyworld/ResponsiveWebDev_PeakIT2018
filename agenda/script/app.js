@@ -33,7 +33,6 @@ function initCheckboxes(){
 function getCheckboxFromLocalStorage(checkboxEl){
    for(var i =0; i<agendaStorage.length; i++){
       if(checkboxEl.id == agendaStorage[i].inputId){
-         debugger;
          checkboxEl.checked = agendaStorage[i].checked;
       }
    }
@@ -41,7 +40,6 @@ function getCheckboxFromLocalStorage(checkboxEl){
 
 function calcualteProgress(){
    var changedInputEl = this;
-   console.log(changedInputEl);
    updateValueInLocalStorage(changedInputEl);
    var cathegories =  document.querySelectorAll('.cathegory');
    var totalProggress = document.querySelector('#totalProgress');
@@ -58,12 +56,10 @@ function calcualteProgress(){
 }
 
 function updateValueInLocalStorage(inputEl){
-   debugger;
    if (agendaStorage && agendaStorage.length){
       var updated = false;
       for(var i=0; i<agendaStorage.length; i++){
          if(inputEl.id == agendaStorage[i].inputId){
-            debugger;
             agendaStorage[i].checked =  inputEl.checked;
             updated = true;
          }
@@ -74,9 +70,7 @@ function updateValueInLocalStorage(inputEl){
       window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorage));
    }
    else{
-      debugger;
       agendaStorage.push({inputId:inputEl.id, checked:inputEl.checked});
-      debugger;
       window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorage));
    }
 

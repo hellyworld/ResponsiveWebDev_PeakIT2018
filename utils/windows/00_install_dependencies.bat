@@ -1,1 +1,1 @@
-npm i -g browser-sync node-sass
+npm i -g browser-sync node-sass nodemon

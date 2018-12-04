@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-scss" : " node-sass ./components/scss -o ./components/css -w --output-style compressed ---source-map true | node-sass ./agenda/scss -o ./agenda/css -w --output-style compressed ---source-map true | node-sass ./helloWorld/scss -o ./helloWorld/css -w --output-style compressed ---source-map true | node-sass ./project/scss -o ./project/css -w --output-style compressed ---source-map true",
+    "compile-scss" : " node-sass ./components/scss -o ./components/css  --output-style compressed ---source-map true | node-sass ./agenda/scss -o ./agenda/css  --output-style compressed ---source-map true | node-sass ./helloWorld/scss -o ./helloWorld/css  --output-style compressed ---source-map true | node-sass ./project/scss -o ./project/css  --output-style compressed ---source-map true",
+    "watch-scss": "nodemon -e scss -x \"npm run compile-scss\"",
     "browser-sync": "browser-sync ./ -w  --files '**/*'"
   },
   "repository": {
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018/issues"
   },
-  "homepage": "https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018#readme"
+  "homepage": "https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.18.7"
+  }
 }

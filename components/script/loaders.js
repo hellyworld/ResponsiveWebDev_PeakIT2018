@@ -17,7 +17,19 @@ function loadHeader() {
             document.querySelector("#navList").classList.add("hidden");
           }
         });
+
+        if(window.location.href.indexOf('project') !=-1 ){
+          document.querySelector("#projectLink").classList.add('active');
+        }
+
+        if(window.location.href.indexOf('agenda') !=-1 ){
+          document.querySelector("#agendaLink").classList.add('active');
+        }
+
     });
+
+
+
 }
 
 function loadFooter() {

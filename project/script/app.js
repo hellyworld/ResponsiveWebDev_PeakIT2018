@@ -42,8 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
    }
 
    function displayJoke (joke){
-      debugger;
-      console.log('doc container',  document.querySelector('#jokeContainer p'));
+      //console.log('doc container',  document.querySelector('#jokeContainer p'));
       document.querySelector('#jokeContainer p').innerHTML = joke.value.joke;
    }
 
