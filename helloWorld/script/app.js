@@ -20,9 +20,10 @@ allDogImages.forEach(dogImage => {
  * Event handlers implementations
  */
 function handleImageClick() {
+  //debugger;
   var currentElement = this;
   console.log("clicked on", currentElement);
-  animateClick(currentElement);
+  animateElement(currentElement);
 }
 
 function handleCatClick() {
