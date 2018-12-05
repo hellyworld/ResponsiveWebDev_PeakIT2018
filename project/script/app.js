@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
       console.dir(url);
 
+      var exludedCathegories = ["explicit"] ;
+
       var params = {exclude: '"["explicit"]"' , firstName : firstNameVal, lastName: lastNameVal}
 
       url.search = new URLSearchParams(params)
@@ -48,3 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+function arrayToString(myAray){
+
+}
