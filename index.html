@@ -7,16 +7,16 @@
     <title>Introduction to Responsive Web Development</title>
   </head>
 
-  <style> 
-  
-    .zoom {
+  <style>
+    /* this is just an example, you whould not write document-level style unless it's REALLY necessary */
+    .zoom-me {
       transition: transform 0.2s; /* Animation */
     }
 
-    .zoom:hover {
+    .zoom-me:hover {
       transform: scale(
         1.1
-      ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      );
     }
 
     a,
@@ -26,7 +26,6 @@
       text-decoration: none;
       color: inherit;
     }
-
   </style>
 
   <link
@@ -38,8 +37,8 @@
     <h1 class="text-center py-10 font-serif">The Chuck Norris App</h1>
 
     <div class="flex justify-around flex-wrap">
-      <a href="./helloWorld/" class="px-6"> <!--this is a relative path-->
-        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom">
+      <a href="./helloWorld/" class="px-6"><!-- this is a relative path -->
+        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom-me">
           <img
             class="w-full"
             src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543434287/HelloWorld.jpg"
@@ -59,8 +58,8 @@
             >
             <span
               class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
-              >#SCSS</span
-            >
+              >#SCSS
+            </span>
             <span
               class="inline-block bg-grey-lighter rounded-full px-3 py-1 text-sm font-semibold text-grey-darker hover:text-black"
               >#Intro</span
@@ -78,7 +77,7 @@
       </a>
 
       <a href="./project/" class="px-6 py-6">
-        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom-me">
           <img
             class="w-full"
             src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543432463/ChuckNorris.jpg"
@@ -88,8 +87,8 @@
             <div class="font-bold text-xl mb-2">The Chuck Norris App</div>
             <p class="text-grey-darker text-base">
               Here we put the core concepts in practice by building a web
-              interface that can "talk" to an API, get data from an API and
-              send parameters over HTTP
+              interface that can "talk" to an API, get data from an API and send
+              parameters over HTTP
             </p>
           </div>
           <div class="px-6 py-4">
@@ -114,7 +113,7 @@
       </a>
 
       <a href="./agenda/" class="px-6 py-6">
-        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom-me">
           <img
             class="w-full"
             src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543699701/Business-Cat.jpg"
@@ -123,7 +122,9 @@
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">Agenda</div>
             <p class="text-grey-darker text-base">
-              A list of subjects that we will tackle in this worskhop. This small app uses the HTML localStorage to persist the state of our progress.
+              A list of subjects that we will tackle in this worskhop. This
+              small app uses the HTML localStorage to persist the state of our
+              progress.
             </p>
           </div>
           <div class="px-6 py-4">
@@ -152,9 +153,10 @@
       </a>
 
       <a
-        href="https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018/tree/master/presentation" class="px-6 py-6"
+        href="https://github.com/florinasavei/ResponsiveWebDev_PeakIT2018/tree/master/presentation"
+        class="px-6 py-6"
       >
-        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg zoom-me">
           <img
             class="w-full"
             src="https://res.cloudinary.com/florinasasvei/image/upload/ar_1:1,c_fill,g_auto,e_art:hokusai/v1543434356/TypingCat.gif"
@@ -164,7 +166,7 @@
             <div class="font-bold text-xl mb-2">Resources</div>
             <p class="text-grey-darker text-base">
               A shortcut to my github repo containing different examples, tips
-               refferences and hacks.
+              refferences and hacks.
             </p>
           </div>
           <div class="px-6 py-4">
@@ -191,12 +193,10 @@
           </div>
         </div>
       </a>
-      
     </div>
 
     <script>
-      
+      console.log("javascript is super-cool!");
     </script>
-
   </body>
 </html>

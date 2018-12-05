@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function displayJoke(joke) {
     //console.log('doc container',  document.querySelector('#jokeContainer p'));
-    document.querySelector("#jokeContainer p").innerHTML = joke.value.joke;
+    document.querySelector("#jokeContainer p#actualJokeFromServer").innerHTML = joke.value.joke;
   }
 });
 

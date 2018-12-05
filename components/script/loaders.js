@@ -13,23 +13,22 @@ function loadHeader() {
         .addEventListener("click", function() {
           if (document.querySelector("#navList").classList.contains("hidden")) {
             document.querySelector("#navList").classList.remove("hidden");
+            document.querySelector("#expandNav").innerHTML = "Collapse";
           } else {
             document.querySelector("#navList").classList.add("hidden");
+            document.querySelector("#expandNav").innerHTML = "Expand";
           }
         });
 
-        if(window.location.href.indexOf('project') !=-1 ){
-          document.querySelector("#projectLink").classList.add('active');
-        }
+      if (window.location.href.indexOf("project") != -1) {
+        document.querySelector("#projectLink").classList.add("active");
+      }
 
-        if(window.location.href.indexOf('agenda') !=-1 ){
-          document.querySelector("#agendaLink").classList.add('active');
-        }
-
+      if (window.location.href.indexOf("agenda") != -1) {
+        document.querySelector("#agendaLink").classList.add("active");
+      }
+      
     });
-
-
-
 }
 
 function loadFooter() {
@@ -41,6 +40,5 @@ function loadFooter() {
       document.querySelector("#footerContainer").innerHTML = markup;
       var event = new Event("footerLoaded");
       document.dispatchEvent(event);
-
     });
 }

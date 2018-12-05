@@ -1,0 +1,1 @@
+In VS Code write html:5 and hit TAB or Enter

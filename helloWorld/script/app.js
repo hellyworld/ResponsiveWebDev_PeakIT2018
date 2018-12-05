@@ -40,6 +40,9 @@ function handleDogClick() {
   });
 }
 
+/**
+ * Helper functions
+ */
 function vibrate() {
   //enable vibration
   navigator.vibrate =
