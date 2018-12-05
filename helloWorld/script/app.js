@@ -60,6 +60,6 @@ function animateElement(currentEl){
 function goingHome() {
   window.location.href = window.location.href.substring(
     0,
-    window.location.href.indexOf("/helloWorld/")
+    window.location.href.indexOf("helloWorld")
   );
 }
