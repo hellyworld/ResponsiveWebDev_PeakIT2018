@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       console.dir(url);
 
-      var params = {exclude: '["explicit"]' , firstName : firstNameVal, lastName: lastNameVal}
+      var params = {exclude: '"["explicit"]"' , firstName : firstNameVal, lastName: lastNameVal}
 
       url.search = new URLSearchParams(params)
 
