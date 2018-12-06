@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function displayJoke(joke) {
-    console.log('jike container',  document.querySelector('#jokeContainer p#actualJokeFromServer"'));
+    console.log('jike container',  document.querySelector('#jokeContainer p#actualJokeFromServer'));
     document.querySelector("#jokeContainer p#actualJokeFromServer").innerHTML = joke.value.joke;
   }
 });
