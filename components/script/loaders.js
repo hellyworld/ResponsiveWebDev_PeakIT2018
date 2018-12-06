@@ -51,7 +51,7 @@ function activateLinkForCurrentPage(){
     document.querySelector("#projectLink").classList.add("active");
   }
 
-  if (window.location.href.indexOf("helloWorld") != -1) {
+  if (window.location.href.indexOf("helloWorld") != -1 || window.location.href.indexOf("helloworld") != -1) {
     document.querySelector("#helloWorldLink").classList.add("active");
   }
 
