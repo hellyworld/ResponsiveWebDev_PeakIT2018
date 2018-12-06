@@ -1,5 +1,8 @@
 console.log("js loaded");
 
+loadHeader();
+loadFooter();
+
 var allImages = document.querySelectorAll("img");
 //clasic for loop
 for (var i = 0; i < allImages.length; i++) {
