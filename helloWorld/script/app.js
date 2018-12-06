@@ -1,11 +1,13 @@
 console.log("js loaded");
 
 var allImages = document.querySelectorAll("img");
+//clasic for loop
 for (var i = 0; i < allImages.length; i++) {
   allImages[i].addEventListener("click", handleImageClick);
 }
 
 var allCatImages = document.querySelectorAll("#cat-container img");
+//ES6 syntax
 allCatImages.forEach(catImage => {
   catImage.addEventListener("click", handleCatClick);
 });
@@ -14,7 +16,6 @@ var allDogImages = document.querySelectorAll("#dog-container img");
 allDogImages.forEach(dogImage => {
   dogImage.addEventListener("click", handleDogClick);
 });
-
 
 /**
  * Event handlers implementations
