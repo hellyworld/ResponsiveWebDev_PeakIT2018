@@ -17,14 +17,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function initCheckboxes(){
    var allCheckboxes = document.querySelectorAll('ul>li>input[type="checkbox"]');
+
    allCheckboxes.forEach(element => {
-      getCheckboxFromLocalStorage(element);
-      calcualteProgress();
+      getCheckboxStateFromLocalStorage(element);
       element.addEventListener('change', calcualteProgress);
    });
+
+   //initial calculations
+   calcualteProgress();
+
 }
 
-function getCheckboxFromLocalStorage(checkboxEl){
+function getCheckboxStateFromLocalStorage(checkboxEl){
    for(var i =0; i<agendaStorage.length; i++){
       if(checkboxEl.id == agendaStorage[i].inputId){
          checkboxEl.checked = agendaStorage[i].checked;
@@ -35,10 +39,12 @@ function getCheckboxFromLocalStorage(checkboxEl){
 function calcualteProgress(){
    var changedInputEl = this;
    updateValueInLocalStorage(changedInputEl);
-   var cathegories =  document.querySelectorAll('.cathegory');
+
+   var allCathegories =  document.querySelectorAll('.cathegory');
    var totalProggress = document.querySelector('#totalProgress');
+
    totalProggress.value = 0;
-   cathegories.forEach(cathegory => {
+   allCathegories.forEach(cathegory => {
       var cathegoryProgressBar = cathegory.querySelector('progress');
       var checkedInputs = cathegory.querySelectorAll('input[type="checkbox"]:checked');
       cathegoryProgressBar.value=0;
@@ -47,9 +53,11 @@ function calcualteProgress(){
       });
       totalProggress.value = parseInt(totalProggress.value) +  parseInt(cathegoryProgressBar.value);
    });
+
 }
 
 function updateValueInLocalStorage(inputEl){
+
    if (agendaStorage && agendaStorage.length){
       var updated = false;
       for(var i=0; i<agendaStorage.length; i++){
@@ -67,7 +75,6 @@ function updateValueInLocalStorage(inputEl){
       agendaStorage.push({inputId:inputEl.id, checked:inputEl.checked});
       window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorage));
    }
-
 }
 
 function reactToLoaders(){
