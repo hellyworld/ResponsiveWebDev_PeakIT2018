@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var myChuckNorris = new chuckNorrisModel(firstNameVal, lastNameVal);
 
-    var url = new URL("http://api.icndb.com/jokes/random/");
+    var url = new URL("https://api.icndb.com/jokes/random/");
 
     console.dir(url);
 
