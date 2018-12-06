@@ -2,8 +2,10 @@
 @import "../../components/scss/footer";
 @import "../../components/scss/helpers";
 
-#wrapper{
+#helloWorldwrapper{
 
+    padding-bottom: 6rem;
+    
     background-color: rgb(190, 196, 231);
     
     h1,
@@ -20,10 +22,6 @@
         user-select: none;
     }
     
-    #wrapper {
-        padding: 0 15px;
-    }
-
     button{
         border: 2px double red;
     }
@@ -114,12 +112,27 @@
         /* animation-delay: 0.5s; */
     }
     
-    #takeMeSomewareCool {
+    #doSomethingCool {
         background-color: violet;
     }
     
-    #takeMeSomewareCool:hover {
-        font-size: 1rem;
+    #doSomethingCool:hover {
+        font-size: 1.1rem;
+    }
+
+    .animal-container{
+        img{
+            margin-left:15px;
+            margin-right: 15px;
+            &:nth-of-type(2n){
+                //border:3px solid red!important;
+            }
+        }
+    }
+
+    //helper Classes
+    .absolute-positioning{
+        position: absolute;
     }
     
     //making things response (the hard way)
