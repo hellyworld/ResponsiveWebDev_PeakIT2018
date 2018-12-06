@@ -5,7 +5,7 @@ function loadHeader() {
     })
     .then(function(markup) {
       //reander the header
-      document.querySelector("#navigationContainer").innerHTML = markup;
+      document.querySelector("#headerContainer").innerHTML = markup;
 
       var event = new Event("headerLoaded");
       document.dispatchEvent(event);
@@ -51,7 +51,12 @@ function activateLinkForCurrentPage(){
     document.querySelector("#projectLink").classList.add("active");
   }
 
+  if (window.location.href.indexOf("helloWorld") != -1) {
+    document.querySelector("#helloWorldLink").classList.add("active");
+  }
+
   if (window.location.href.indexOf("agenda") != -1) {
     document.querySelector("#agendaLink").classList.add("active");
   }
+
 }
