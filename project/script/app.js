@@ -29,12 +29,22 @@ document.addEventListener("DOMContentLoaded", function() {
   //event listeners
   getJokeButton.addEventListener("click", getJokeFromServer);
 
+  getJokeButton.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+
+  getJokeButton.addEventListener("dblclick", function(event) {
+    event.preventDefault();
+    alert("don't you dobule click me!!");
+  });
+
+
   function getJokeFromServer() {
     var firstNameVal = document.querySelector("#firstName").value;
     var lastNameVal = document.querySelector("#lastName").value;
 
-    var isSafeForWork =  document.querySelector("#filderMature").checked;
-    var isOnlyNerdy =  document.querySelector("#onlyNerdy").checked;
+    var isSafeForWork = document.querySelector("#filderMature").checked;
+    var isOnlyNerdy = document.querySelector("#onlyNerdy").checked;
 
     var myChuckNorris = new chuckNorrisModel(firstNameVal, lastNameVal);
 
@@ -43,14 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
     console.dir(url);
 
     var exludedCathegories = isSafeForWork ? "[explicit]" : null;
-    
+
     var params = {
       firstName: myChuckNorris.firstName,
       lastName: myChuckNorris.lastName,
       exclude: exludedCathegories
-    }
-    
-    if(isOnlyNerdy){
+    };
+
+    if (isOnlyNerdy) {
       params.limitTo = "[nerdy]";
     }
 
@@ -68,8 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function displayJoke(joke) {
-    console.log('jike container',  document.querySelector('#jokeContainer p#actualJokeFromServer'));
-    document.querySelector("#jokeContainer p#actualJokeFromServer").innerHTML = joke.value.joke;
+    console.log(
+      "jike container",
+      document.querySelector("#jokeContainer p#actualJokeFromServer")
+    );
+    document.querySelector("#jokeContainer p#actualJokeFromServer").innerHTML =
+      joke.value.joke;
   }
 });
 
