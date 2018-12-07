@@ -1,12 +1,12 @@
-var agendaStorage = [];
+var agendaStorageModel = [];
 var rawStorage = window.localStorage.getItem('agendaStorage');
 if(rawStorage){
-    agendaStorage =  JSON.parse(window.localStorage.getItem('agendaStorage'));
+   agendaStorageModel =  JSON.parse(window.localStorage.getItem('agendaStorage'));
 }
 
-var agendaDataStructure = [
-];
-
+/**
+ * Entry Point of the page
+ */
 document.addEventListener("DOMContentLoaded", function() {
     console.log('dom loaded');
     loadHeader();
@@ -15,28 +15,34 @@ document.addEventListener("DOMContentLoaded", function() {
     initCheckboxes(); 
 });
 
+/**
+ * Updates the checkboxes and progress-bars
+ * adds change event listener
+ */
 function initCheckboxes(){
+
    var allCheckboxes = document.querySelectorAll('ul>li>input[type="checkbox"]');
 
    allCheckboxes.forEach(element => {
-      getCheckboxStateFromLocalStorage(element);
+      updateCheckboxStateFromLocalStorage(element);
       element.addEventListener('change', calcualteProgress);
    });
 
    //initial calculations
    calcualteProgress();
-
 }
 
-function getCheckboxStateFromLocalStorage(checkboxEl){
-   for(var i =0; i<agendaStorage.length; i++){
-      if(checkboxEl.id == agendaStorage[i].inputId){
-         checkboxEl.checked = agendaStorage[i].checked;
+
+function updateCheckboxStateFromLocalStorage(checkboxEl){
+   for(var i =0; i<agendaStorageModel.length; i++){
+      if(checkboxEl.id == agendaStorageModel[i].inputId){
+         checkboxEl.checked = agendaStorageModel[i].checked;
       }
    }
 }
 
 function calcualteProgress(){
+   
    var changedInputEl = this;
    updateValueInLocalStorage(changedInputEl);
 
@@ -57,23 +63,22 @@ function calcualteProgress(){
 }
 
 function updateValueInLocalStorage(inputEl){
-
-   if (agendaStorage && agendaStorage.length){
+   if (agendaStorageModel && agendaStorageModel.length){
       var updated = false;
-      for(var i=0; i<agendaStorage.length; i++){
-         if(inputEl.id == agendaStorage[i].inputId){
-            agendaStorage[i].checked =  inputEl.checked;
+      for(var i=0; i<agendaStorageModel.length; i++){
+         if(inputEl.id == agendaStorageModel[i].inputId){
+            agendaStorageModel[i].checked =  inputEl.checked;
             updated = true;
          }
       }
       if(!updated){
-         agendaStorage.push({inputId:inputEl.id, checked:inputEl.checked});
+         agendaStorageModel.push({inputId:inputEl.id, checked:inputEl.checked});
       }
-      window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorage));
+      window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorageModel));
    }
    else{
       agendaStorage.push({inputId:inputEl.id, checked:inputEl.checked});
-      window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorage));
+      window.localStorage.setItem('agendaStorage', JSON.stringify(agendaStorageModel));
    }
 }
 
@@ -84,5 +89,4 @@ function reactToLoaders(){
    document.addEventListener('footerLoaded', function (e) {
       console.log('footer loaded');
    }, false);
-
 }
