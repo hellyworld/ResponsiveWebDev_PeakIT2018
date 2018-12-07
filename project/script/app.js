@@ -2,23 +2,12 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM loaded");
   loadHeader();
   loadFooter();
+  reactToLoadedComponents();
+  init();
+  handleJokesFilterChange();
+});
 
-  document.addEventListener(
-    "headerLoaded",
-    function(e) {
-      console.log("header loaded");
-    },
-    false
-  );
-  document.addEventListener(
-    "footerLoaded",
-    function(e) {
-      console.log("footer loaded");
-    },
-    false
-  );
-
-  //models
+function init() {
   var getJokeButton = document.querySelector("#getJoke");
 
   function chuckNorrisModel(fName, lName) {
@@ -37,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     event.preventDefault();
     alert("don't you dobule click me!!");
   });
-
 
   function getJokeFromServer() {
     var firstNameVal = document.querySelector("#firstName").value;
@@ -85,6 +73,36 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#jokeContainer p#actualJokeFromServer").innerHTML =
       joke.value.joke;
   }
-});
+}
 
-function arrayToString(myAray) {}
+function handleJokesFilterChange(){
+  document.querySelector('#filderMature').addEventListener('change',function(){
+    debugger;
+    var lockIcon = document.getElementById('lockIcon');
+    if(lockIcon.classList.contains('fa-lock')){
+      lockIcon.classList.remove('fa-lock');
+      lockIcon.classList.add('fa-lock-open');
+    }else{
+      lockIcon.classList.remove('fa-lock-open');
+      lockIcon.classList.add('fa-lock');
+    }
+
+  });
+}
+
+function reactToLoadedComponents() {
+  document.addEventListener(
+    "headerLoaded",
+    function(e) {
+      console.log("header loaded");
+    },
+    false
+  );
+  document.addEventListener(
+    "footerLoaded",
+    function(e) {
+      console.log("footer loaded");
+    },
+    false
+  );
+}
