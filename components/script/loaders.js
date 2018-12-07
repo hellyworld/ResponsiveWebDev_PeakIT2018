@@ -31,6 +31,19 @@ function loadFooter() {
     });
 }
 
+function insertFavicon (){
+  fetch("../components/favicon.html")
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(markup) {
+    document.getElementsByTagName('head')[0].insertAdjacentHTML('afterbegin', markup);
+    var event = new Event("faviconLoaded");
+    document.dispatchEvent(event);
+
+  });
+}
+
 
 function addHeaderEvents(){
   document

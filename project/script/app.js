@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log("DOM loaded");
   loadHeader();
   loadFooter();
+  insertFavicon();
   reactToLoadedComponents();
   init();
   handleJokesFilterChange();

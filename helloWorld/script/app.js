@@ -2,6 +2,7 @@ console.log("js loaded");
 
 loadHeader();
 loadFooter();
+insertFavicon();
 
 var allImages = document.querySelectorAll("img");
 //clasic for loop

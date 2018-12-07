@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('dom loaded');
     loadHeader();
     loadFooter();
+    insertFavicon();
     reactToLoaders();
     initCheckboxes(); 
 });
