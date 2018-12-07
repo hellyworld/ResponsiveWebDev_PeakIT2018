@@ -22,3 +22,13 @@ Running a script from a Node project:
 npm run <name of the script>
 ```
 
+
+
+### CMD Shortcuts:
+
+Find out the version of a program that you are using:
+
+```
+<program> -version
+```
+
