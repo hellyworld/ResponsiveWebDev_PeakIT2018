@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var lastNameVal = document.querySelector("#lastName").value;
 
     var isSafeForWork =  document.querySelector("#filderMature").checked;
+    var isOnlyNerdy =  document.querySelector("#onlyNerdy").checked;
 
     var myChuckNorris = new chuckNorrisModel(firstNameVal, lastNameVal);
 
@@ -41,14 +42,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     console.dir(url);
 
-    var exludedCathegories = isSafeForWork ? "['explicit']" : [];
+    var exludedCathegories = isSafeForWork ? "[explicit]" : null;
     
     var params = {
       firstName: myChuckNorris.firstName,
       lastName: myChuckNorris.lastName,
       exclude: exludedCathegories
-      //exclude: '[excplicit]'
-    };
+    }
+    
+    if(isOnlyNerdy){
+      params.limitTo = "[nerdy]";
+    }
 
     url.search = new URLSearchParams(params);
 

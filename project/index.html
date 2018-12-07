@@ -24,7 +24,12 @@
     <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <!-- favicon END -->
-
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+   />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"/>
     <link  rel="stylesheet" href="./css/main.css"/>
     
@@ -47,10 +52,14 @@
               <input id="lastName" type="text" placeholder="Your Last Name" class="mx-4 my-2">
           </div>
           <div class="flex justify-center">
-              <label>
+              <label class="p-4">
                   <span>Filter Mature jokes</span>
                   <input id="filderMature" type="checkbox" checked name="filderMature">
               </label>
+              <label  class="p-4">
+                <span>Nerdy Jokes only</span>
+                <input id="onlyNerdy" type="checkbox" checked name="onlyNerdy">
+            </label>
           </div>
           <div class="flex justify-center">
               <buton id="getJoke" type="submit" class="cursor-pointer bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" checked>Get Joke!</buton>
@@ -64,9 +73,14 @@
 
       <section class="flex justify-end mb-12">
           <div  class="flex justify-cente flex-col sm:flex-row">
-              <input type="text" value="A text that only Cuck Norris cant change" readonly class="m-2">
-              <input type="password" value="a super secret password" class="m-2">
-            </div>
+            <span>
+                <textarea readonly class="m-2">A text that only Cuck Norris cant change
+                </textarea>
+              </span>
+            <span>
+                <input type="password" value="a super secret password" class="m-2">
+            </span>
+          </div>
       </section>
 
     </main>
